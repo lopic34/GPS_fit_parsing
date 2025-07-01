@@ -22,7 +22,7 @@ This script automatically processes and renames a batch of `.fit` files (GPS act
 2022-03-29_18h38_velo_6km.fit
 ```
 
-## Example Log (Execution Journal)
+## Example of logs
 ```
 Processing file: 2-sports-site-9565535999999605792.fit
 SPORT:  running
