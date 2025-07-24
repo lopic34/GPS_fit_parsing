@@ -24,29 +24,26 @@ This script automatically processes and renames a batch of `.fit` files (GPS act
 
 ## Example of logs
 ```
-Processing file: 2-sports-site-9565535999999605792.fit
-SPORT:  running
-SUB-SPORT:  0
-Start Event Timestamp (RAW):  2025-02-03 11:25:17
-total_distance_km:  8
-File moved to: done/2025-02-03_12h25_running_8km.fit
-###########################################
+Processing file: 3181129719.fit
+Start Event Timestamp (RAW):  2020-01-05 11:44:56
+SPORT:  inline_skating       /      SUB-SPORT:  0
+Total_distance_km:  7
+File exported to: done/2020-01-05_12h44_roller_7km.fit
+################################################################
 
-Processing file: 32-sports-site-956553599999960b5a4ebcf.fit
-SPORT:  inline_skating
-SUB-SPORT:  0
-Start Event Timestamp (RAW):  2018-11-11 11:14:57
-total_distance_km:  23
-File moved to: done/2018-11-11_12h14_roller_23km.fit
-###########################################
+Processing file: 3181129179.fit
+Start Event Timestamp (RAW):  2020-01-05 14:19:14
+SPORT:  inline_skating       /      SUB-SPORT:  0
+Total_distance_km:  8
+File exported to: done/2020-01-05_15h19_roller_8km.fit
+################################################################
 
-Processing file: 25-sports-site-95655359999996001714c77.fit
-SPORT:  running
-SUB-SPORT:  0
-Start Event Timestamp (RAW):  2020-06-14 16:47:41
-total_distance_km:  9
-File moved to: done/2020-06-14_18h47_running_9km.fit
-###########################################
+Processing file: 3150854002.fit
+Start Event Timestamp (RAW):  2019-12-26 17:26:59
+SPORT:  cycling       /      SUB-SPORT:  0
+Total_distance_km:  2
+File exported to: done/2019-12-26_18h26_velo_2km.fit
+################################################################
 ```
 
 ## Requirements
@@ -54,20 +51,22 @@ File moved to: done/2020-06-14_18h47_running_9km.fit
 - Python modules:
   - `fitparse`
   - `pytz`
+  - `zipfile`
+  - `shutil`
 
 Install dependencies with:
 ```bash
-pip install fitparse pytz
+pip install -r requirements.txt
 ```
 or
 ```bash
-pip install -r requirements.txt
+pip install fitparse pytz
 ```
 
 ## Usage
 Place your `.fit` files in the same folder as the script, then run:
 ```bash
-python GPS_fit_files_parsing.py
+python3 GPS_fit_files_parsing.py
 ```
 
 Processed files will be moved to the `done/` folder with a descriptive name.
